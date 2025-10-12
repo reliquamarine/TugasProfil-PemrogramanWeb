@@ -1,682 +1,380 @@
-:root {
-  --primary-color: #4d4d4d;
-  --secondary-color: #7c6f6f;
-  --background-gradient: linear-gradient(to right, #545454, #9a9d9f);
-  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  --timeline-line-color: #5a5858;
-  --timeline-dot-color: #4d4d4d;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  background-image: var(--background-gradient);
-  color: #333;
-  line-height: 1.8;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 975px;
-  width: 100%;
-  background: #c7c7c7;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: var(--box-shadow);
-  margin: 30px;
-  animation: fadeIn 1s ease-out;
-  position: relative;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-header {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 40px;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 15px;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #888;
-  font-weight: 600;
-  font-size: 1.1em;
-  padding: 5px 10px;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 3px;
-  background-color: var(--primary-color);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--primary-color);
-}
-
-.nav-link.active::after {
-  transform: scaleX(1);
-}
-
-.nav-link i {
-  display: none;
-}
-
-.nav-text {
-  display: inline;
-  font-size: 1.1em;
-}
-
-h1 {
-  font-size: 2.8em;
-  color: var(--primary-color);
-  margin: 0;
-}
-
-h2 {
-  text-align: center;
-  color: #4a4a4a;
-  margin-bottom: 25px;
-  font-weight: 600;
-}
-
-.typing-text-size {
-  font-size: 1.05em;
-}
-
-section {
-  display: none;
-  padding: 20px 0;
-  animation: fadeIn 0.8s ease-out;
-}
-
-section.active {
-  display: block;
-}
-
-.profile-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.profile-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid var(--secondary-color);
-  margin-bottom: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-  cursor: pointer;
-}
-
-.profile-photo:hover {
-  transform: scale(1.05) rotate(3deg);
-  border-color: var(--primary-color);
-}
-
-.info-list {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
-}
-
-.info-list li {
-  background-color: #e3f2fd;
-  margin: 10px 0;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 1.1em;
-  color: #313436;
-  transition: background-color 0.3s ease;
-}
-
-.info-list li:hover {
-  background-color: #a2a8ab;
-}
-
-.info-list li strong {
-  color: var(--primary-color);
-}
-
-.short-intro {
-  text-align: justify;
-  margin: 30px 0;
-  padding: 0 20px;
-}
-
-.short-intro h2 {
-  font-size: 1.2em;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.short-intro #typing-text {
-  font-size: 1em;
-}
-
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid var(--primary-color);
-  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-  display: inline-block;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: var(--primary-color);
-  }
-}
-
-.horizontal-divider {
-  border: 0;
-  height: 1.5px;
-  background-color: #e0e0e0;
-  margin: 40px auto;
-  max-width: 600px;
-}
-
-.combined-content h2 {
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 20px;
-  color: var(--primary-color);
-}
-
-.content-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.education-section {
-  flex: 1;
-  margin-top: 30px;
-  position: relative;
-}
-
-.education-section h2 {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.education-list {
-  list-style: none;
-  padding-left: 10px;
-  margin: 0;
-  position: relative;
-}
-
-.education-list::before {
-  content: "";
-  position: absolute;
-  left: 30px;
-  top: 5px;
-  bottom: 8px;
-  width: 2px;
-  background-color: var(--timeline-line-color);
-  z-index: 0;
-}
-
-.education-list li {
-  position: relative;
-  margin-bottom: 25px;
-  padding-left: 50px;
-  text-align: left;
-  font-size: 1.05em;
-  color: #333;
-}
-
-.education-list li::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 5px;
-  width: 16px;
-  height: 16px;
-  background-color: var(--timeline-dot-color);
-  border-radius: 50%;
-  border: 3px solid #c7c7c7;
-  z-index: 1;
-}
-
-.education-list li h3 {
-  margin: 0 0 5px 0;
-  color: var(--primary-color);
-}
-
-.education-list li p {
-  margin: 0;
-  color: #555;
-  font-size: 0.95em;
-}
-
-.experience-section {
-  flex: 1;
-  margin-top: 55px;
-}
-
-.experience-section p {
-  font-size: 1.1em;
-  line-height: 1.8;
-  margin: 0;
-  text-align: left;
-}
-
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.schedule-table {
-  min-width: 600px;
-  width: 100%;
-  border-collapse: collapse;
-  margin: 30px 0;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.schedule-table th,
-.schedule-table td {
-  border: 1px solid #2d2d2d;
-  padding: 12px 15px;
-  text-align: left;
-  font-size: 1em;
-  white-space: nowrap;
-}
-
-.schedule-table th {
-  background-color: #9b9b9b;
-  color: #333;
-  text-align: center;
-  font-weight: 600;
-}
-
-.schedule-table tr:nth-child(even) {
-  background-color: #f8f8f8;
-}
-
-.schedule-table tr:hover {
-  background-color: #a2a8ab;
-}
-
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #777;
-  font-size: 0.95em;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-}
-
-.social-icons {
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-icons a {
-  color: #555;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: var(--primary-color);
-  transform: translateY(-5px) scale(1.1);
-}
-
-.social-icon {
-  font-size: 2em;
-}
-
-.image-popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-popup-content {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  object-fit: contain;
-}
-
-.image-popup .close-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.image-popup .close-btn:hover {
-  color: #ccc;
-}
-
-.materi-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 25px;
-  flex-wrap: wrap;
-}
-
-.materi-nav a {
-  background: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.materi-nav a:hover {
-  background: #333;
-  transform: translateY(-2px);
-}
-
-.materi-card {
-  background: #f4f6f8;
-  padding: 20px;
-  margin-bottom: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 0.6s ease both;
-}
-
-.materi-card h3 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-#materi p {
-  background: #f4f6f8;
-  padding: 15px 20px;
-  border-radius: 10px;
-  line-height: 1.8;
-  margin-bottom: 25px;
-  text-align: justify;
-}
-
-#materi li {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 30px;
-}
-
-#materi ol li {
-  background: #ffffff;
-  margin: 10px 0;
-  padding: 12px 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 1.05em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 5px solid var(--primary-color);
-}
-
-#materi ol li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-#materi p,
-#materi ol li {
-  animation: fadeInUp 0.6s ease both;
-}
-
-.sub-materi {
-  background: #ffffff;
-  padding: 20px 25px;
-  border-radius: 10px;
-  margin-top: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-left: 5px solid var(--primary-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sub-materi:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.sub-materi h4 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.sub-materi p {
-  text-align: justify;
-  margin-bottom: 10px;
-}
-
-.sub-materi ul {
-  padding-left: 25px;
-  margin: 0;
-}
-
-.sub-materi ul li {
-  margin-bottom: 6px;
-}
-
-.sub-materi i {
-  color: var(--primary-color);
-  font-size: 1.1em;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 20px;
-    margin: 20px 10px;
-  }
-  .nav-link {
-    font-size: 1em;
-  }
-  .profile-photo {
-    width: 120px;
-    height: 120px;
-  }
-  .short-intro h2 {
-    font-size: 1.1em;
-  }
-  .content-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .education-section,
-  .experience-section {
-    padding: 0 10px;
-  }
-  .education-list {
-    padding-left: 30px;
-  }
-  .education-list::before {
-    left: 12px;
-    top: 13px;
-    bottom: 0;
-  }
-  .education-list li {
-    padding-left: 25px;
-  }
-  .education-list li::before {
-    left: -27.5px;
-    top: 5px;
-    width: 16px;
-    height: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-link {
-    font-size: 1.5em;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav-link i {
-    display: inline;
-  }
-
-  .nav-text {
-    display: none;
-  }
-
-  nav {
-    gap: 18px;
-  }
-
-  .schedule-table {
-    font-size: 0.9em;
-  }
-
-  .materi-nav {
-    gap: 10px;
-  }
-  .materi-nav a {
-    font-size: 0.9em;
-    padding: 8px 12px;
-  }
-
-  .sub-materi {
-    padding: 15px;
-  }
-  .sub-materi h4 {
-    font-size: 1.05em;
-  }
-}
-
-@media (max-width: 480px) {
-  nav {
-    gap: 14px;
-  }
-  .nav-link {
-    font-size: 1.3em;
-  }
-
-  .schedule-table {
-    font-size: 0.85em;
-  }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: all 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-60px);
-  transition: all 0.8s ease-out;
-}
-
-.reveal-right {
-  opacity: 0;
-  transform: translateX(60px);
-  transition: all 0.8s ease-out;
-}
-
-.reveal-left.active,
-.reveal-right.active {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.reveal-fade {
-  opacity: 0;
-  transition: opacity 1s ease-out;
-}
-
-.reveal-fade.active {
-  opacity: 1;
-}
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al Farel - Pemrograman Web</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="asset/style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Al Farel</h1>
+        <nav>
+          <a href="#materi" class="nav-link" title="Membuat Website">
+            <i class="fas fa-laptop-code"></i
+            ><span class="nav-text">Materi</span>
+          </a>
+          <a href="#about-me" class="nav-link active" title="Tentang Saya">
+            <i class="fas fa-user"></i
+            ><span class="nav-text">Tentang Saya</span>
+          </a>
+          <a href="#schedule" class="nav-link" title="Jadwal Kuliah">
+            <i class="fas fa-calendar-alt"></i
+            ><span class="nav-text">Jadwal</span>
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="about-me" class="active">
+          <div class="profile-section">
+            <img
+              src="asset/image/profileImage.jpg"
+              alt="Foto Pribadi"
+              class="profile-photo"
+              id="profile-photo"
+            />
+
+            <ul class="info-list">
+              <li><strong>Nama Lengkap:</strong> Muhammad Al Farel Azhar</li>
+              <li><strong>NIM:</strong> 241401009</li>
+              <li><strong>Kom:</strong> C</li>
+              <li><strong>Hobi:</strong> Bermain game, mengetik, berenang</li>
+              <li>
+                <strong>Motto Hidup:</strong> "Nikmati setiap momen dengan jadi
+                diri sendiri."
+              </li>
+            </ul>
+          </div>
+
+          <div class="short-intro reveal-fade">
+            <h2><span id="typing-text"></span></h2>
+          </div>
+
+          <hr class="horizontal-divider" />
+
+          <div class="combined-conten reveal-left">
+            <h2>Riwayat Pendidikan & Pengalaman</h2>
+            <div class="content-container">
+              <div class="education-section">
+                <ul class="education-list">
+                  <li>
+                    <h3>MIS Fauzan Al Islamiyah</h3>
+                    <p><strong>Tahun:</strong> 2012 - 2018</p>
+                  </li>
+                  <li>
+                    <h3>MTS Negeri 1 Medan</h3>
+                    <p><strong>Tahun:</strong> 2018 - 2021</p>
+                  </li>
+                  <li>
+                    <h3>MAS Muallimin UNIVA Medan</h3>
+                    <p><strong>Jurusan:</strong> MIPA</p>
+                    <p><strong>Tahun:</strong> 2021 - 2024</p>
+                  </li>
+                  <li>
+                    <h3>Universitas Sumatera Utara</h3>
+                    <p><strong>Jurusan:</strong> Ilmu Komputer</p>
+                    <p><strong>Tahun:</strong> 2024 - Sekarang</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="experience-section">
+                <p class="experience-paragraph">
+                  Selama kuliah di Universitas Sumatera Utara, saya aktif dalam
+                  berbagai kegiatan kampus. Saya pernah menjadi anggota panitia
+                  Computer Science Annual dan juga panitia Pekan Olahraga dan
+                  Seni. Selain itu, saya sering mengikuti seminar-seminar yang
+                  diselenggarakan di kampus untuk menambah wawasan. Saya juga
+                  bergabung dengan Google Developer Group on Campus USU dan
+                  sempat mengikuti Pelatihan Dasar Organisasi. Sebagai proyek
+                  pribadi, saya pernah mencoba membuat aplikasi sederhana untuk
+                  menonton anime menggunakan software Qt Creator.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="schedule">
+          <div class="table-container">
+            <h2>Jadwal Kuliah Semester Ini</h2>
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Hari</th>
+                  <th>Waktu</th>
+                  <th>Mata Kuliah</th>
+                  <th>Dosen</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Senin</td>
+                  <td>14:50 - 16 30</td>
+                  <td>Praktikum Pemrograman Web</td>
+                  <td>Nurrahmadayeni M.Kom</td>
+                </tr>
+                <tr>
+                  <td>Selasa</td>
+                  <td>10:00 - 11:40</td>
+                  <td>IELTS Preparation</td>
+                  <td>Drs. Yulianus Harefa GradDipEd TESOL., MEd TESOL</td>
+                </tr>
+                <tr>
+                  <td>Selasa</td>
+                  <td>12:20 - 14:50</td>
+                  <td>Teknologi Komunikasi dan Informasi</td>
+                  <td>Dr. Feni Khairifa S.Sos., MA</td>
+                </tr>
+                <tr>
+                  <td>Rabu</td>
+                  <td>08:00 - 10:30</td>
+                  <td>Struktur Data</td>
+                  <td>Anandhini Medianty Nababan S.Kom., M.T</td>
+                </tr>
+                <tr>
+                  <td>Rabu</td>
+                  <td>10:30 - 13:00</td>
+                  <td>Kecerdasan Buatan</td>
+                  <td>Dr. Pauzi Ibrahim Nainggolan S.Komp., M.Sc</td>
+                </tr>
+                <tr>
+                  <td>Rabu</td>
+                  <td>14:40 - 17:10</td>
+                  <td>Pemrograman Web</td>
+                  <td>Dr. Dewi Sartika Br Ginting S.Kom., M.Kom</td>
+                </tr>
+                <tr>
+                  <td>Kamis</td>
+                  <td>08:00 - 09:40</td>
+                  <td>Praktikum Basis Data</td>
+                  <td>Dr. Dewi Sartika Br Ginting S.Kom., M.Kom</td>
+                </tr>
+                <tr>
+                  <td>Jumat</td>
+                  <td>08:00 - 10:30</td>
+                  <td>Basis Data</td>
+                  <td>Dr. Dewi Sartika Br Ginting S.Kom., M.Kom</td>
+                </tr>
+                <tr>
+                  <td>Jumat</td>
+                  <td>10:30 - 12:10</td>
+                  <td>Wirausaha Digital</td>
+                  <td>Dr. T. Henny Febriana Harumy S.Kom., M.Kom</td>
+                </tr>
+                <tr>
+                  <td>Jumat</td>
+                  <td>14:00 - 15:40</td>
+                  <td>Praktikum Struktur Data</td>
+                  <td>Anandhini Medianty Nababan S.Kom., M.T</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="materi">
+          <h2>Materi Pemrograman Web</h2>
+          <div class="materi-nav">
+            <a href="#pengenalan">HTML, CSS, JS & Tailwind</a>
+            <a href="#kesan">Kesan & Pesan</a>
+            <a href="#tutorial">Cara Membuat Website</a>
+          </div>
+
+          <div id="pengenalan" class="materi-card">
+            <h3>Mengenal HTML, CSS, JavaScript, dan Tailwind CSS</h3>
+            <p>
+              Dalam pengembangan website modern, keempat teknologi ini adalah
+              pondasi utama yang membentuk tampilan dan fungsi dari setiap
+              halaman web. Masing-masing punya peran penting yang saling
+              melengkapi untuk menciptakan pengalaman pengguna yang interaktif,
+              responsif, dan menarik.
+            </p>
+
+            <div class="sub-materi reveal-right">
+              <h4>
+                <i class="fas fa-code"></i> HTML (HyperText Markup Language)
+              </h4>
+              <p>
+                HTML adalah bahasa markup yang digunakan untuk menyusun struktur
+                dasar halaman web. Elemen-elemen seperti teks, gambar, tautan,
+                tabel, dan form didefinisikan menggunakan tag HTML. Bisa
+                dibilang, HTML adalah “kerangka tulang” dari sebuah website.
+              </p>
+              <ul>
+                <li>
+                  <strong>&lt;h1&gt; - &lt;h6&gt; :</strong> untuk judul dan
+                  subjudul.
+                </li>
+                <li><strong>&lt;p&gt; :</strong> untuk paragraf teks.</li>
+                <li><strong>&lt;a&gt; :</strong> untuk membuat hyperlink.</li>
+                <li>
+                  <strong>&lt;img&gt; :</strong> untuk menampilkan gambar.
+                </li>
+                <li>
+                  <strong>&lt;div&gt; :</strong> untuk mengelompokkan elemen.
+                </li>
+              </ul>
+            </div>
+
+            <div class="sub-materi reveal-right">
+              <h4>
+                <i class="fas fa-paint-brush"></i> CSS (Cascading Style Sheets)
+              </h4>
+              <p>
+                CSS digunakan untuk mengatur tampilan visual dari halaman web.
+                Dengan CSS, kita bisa mengubah warna, ukuran font, posisi
+                elemen, animasi, dan banyak lagi. CSS menjadikan website
+                terlihat menarik dan profesional.
+              </p>
+              <ul>
+                <li><strong>color:</strong> mengatur warna teks.</li>
+                <li>
+                  <strong>background:</strong> memberi warna atau gambar latar
+                  belakang.
+                </li>
+                <li>
+                  <strong>margin / padding:</strong> mengatur jarak antar
+                  elemen.
+                </li>
+                <li>
+                  <strong>border-radius:</strong> membuat sudut elemen jadi
+                  melengkung.
+                </li>
+                <li><strong>animation:</strong> menambahkan efek bergerak.</li>
+              </ul>
+            </div>
+
+            <div class="sub-materi reveal-right">
+              <h4><i class="fas fa-bolt"></i> JavaScript (JS)</h4>
+              <p>
+                JavaScript adalah bahasa pemrograman yang menambahkan
+                interaktivitas pada website. Tanpa JS, web hanya akan bersifat
+                statis. Dengan JS, kita bisa membuat tombol yang merespons klik,
+                animasi dinamis, validasi form, kalkulator, sampai game berbasis
+                web.
+              </p>
+              <ul>
+                <li>
+                  <strong>document.querySelector():</strong> untuk memilih
+                  elemen HTML.
+                </li>
+                <li>
+                  <strong>addEventListener():</strong> mendeteksi aksi pengguna.
+                </li>
+                <li>
+                  <strong>if/else, loop, function:</strong> logika pemrograman
+                  dasar.
+                </li>
+                <li>
+                  <strong>fetch():</strong> mengambil data dari API eksternal.
+                </li>
+              </ul>
+            </div>
+
+            <div class="sub-materi reveal-right">
+              <h4><i class="fas fa-layer-group"></i> Tailwind CSS</h4>
+              <p>
+                Tailwind CSS adalah framework CSS modern yang menggunakan sistem
+                “utility-first”. Artinya, kita tidak perlu membuat file CSS
+                terpisah — cukup pakai class bawaan seperti
+                <code>bg-blue-500</code> atau <code>text-center</code> langsung
+                di elemen HTML. Ini mempercepat proses styling dan menjaga
+                konsistensi desain di seluruh halaman.
+              </p>
+              <ul>
+                <li><strong>flex, grid:</strong> untuk layout responsif.</li>
+                <li>
+                  <strong>shadow-lg, rounded-xl:</strong> untuk efek bayangan
+                  dan sudut halus.
+                </li>
+                <li>
+                  <strong>hover:text-blue-600:</strong> efek interaktif saat
+                  pointer diarahkan.
+                </li>
+                <li>
+                  <strong>dark mode:</strong> dukungan tema gelap otomatis.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="tutorial" class="materi-card">
+            <h3 class="reveal-right">Tata Cara Membuat Website Sederhana</h3>
+            <ol class="reveal-right">
+              <li>Buat folder proyek (misalnya <strong>myWebsite</strong>).</li>
+              <li>
+                Buat tiga file utama: <code>index.html</code>,
+                <code>style.css</code>, dan <code>main.js</code>.
+              </li>
+              <li>
+                Tulis struktur dasar HTML dan hubungkan file CSS & JS-nya.
+              </li>
+              <li>Tambahkan elemen seperti header, paragraf, dan gambar.</li>
+              <li>Gunakan CSS untuk mempercantik tampilan.</li>
+              <li>Tambahkan JavaScript untuk interaksi (misal efek klik).</li>
+              <li>Uji di browser dan rapikan desainnya.</li>
+            </ol>
+          </div>
+
+          <div id="kesan" class="materi-card">
+            <h3 class="reveal-right">
+              Kesan dan Pesan Belajar Pemrograman Web
+            </h3>
+            <ol class="reveal-right">
+              <li>
+                Belajar pemrograman web awalnya terasa ribet, tapi lama-lama
+                seru banget! 😆 Aku jadi ngerti gimana cara bikin tampilan
+                website yang interaktif dan keren. Tantangan terbesar itu ngatur
+                layout biar responsif dan rapi, tapi setelah paham konsepnya,
+                malah nagih buat ngulik terus. Pesanku: jangan takut error,
+                soalnya setiap error itu langkah menuju “AHA moment” 😎.
+              </li>
+            </ol>
+          </div>
+        </section>
+      </main>
+
+      <footer class="reveal-left">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/azharell._/" target="_blank">
+            <i class="fab fa-instagram social-icon"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/azharell-titik-kumpul/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in social-icon"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/alfarelazhar.fazhar/"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f social-icon"></i>
+          </a>
+          <a href="https://github.com/reliquamarine" target="_blank">
+            <i class="fab fa-github social-icon"></i>
+          </a>
+        </div>
+        <p>&#169; 2025. Made by tikum.</p>
+      </footer>
+    </div>
+
+    <div class="image-popup" id="image-popup">
+      <span class="close-btn" id="close-btn">&times;</span>
+      <img
+        src="asset/image/profileImage.jpg"
+        alt="Foto Pribadi Besar"
+        class="image-popup-content"
+        id="popup-image"
+      />
+    </div>
+    <script src="asset/java/main.js"></script>
+  </body>
+</html>
