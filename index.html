@@ -1,181 +1,380 @@
-
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Al Farel - Pemrograman Web</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="asset/style/style.css" />
-</head>
-<body>
-
-<div class="container">
-    <header>
+  </head>
+  <body>
+    <div class="container">
+      <header>
         <h1>Al Farel</h1>
         <nav>
-            <a href="#about-me" class="nav-link active">Tentang Saya</a>
-            <a href="#schedule" class="nav-link">Jadwal Kuliah</a>
+          <a href="#materi" class="nav-link" title="Membuat Website">
+            <i class="fas fa-laptop-code"></i
+            ><span class="nav-text">Materi</span>
+          </a>
+          <a href="#about-me" class="nav-link active" title="Tentang Saya">
+            <i class="fas fa-user"></i
+            ><span class="nav-text">Tentang Saya</span>
+          </a>
+          <a href="#schedule" class="nav-link" title="Jadwal Kuliah">
+            <i class="fas fa-calendar-alt"></i
+            ><span class="nav-text">Jadwal</span>
+          </a>
         </nav>
-    </header>
-    
-    <main>
+      </header>
+
+      <main>
         <section id="about-me" class="active">
-            <div class="profile-section">
-                <img src="asset/image/profileImage.jpg" alt="Foto Pribadi" class="profile-photo" id="profile-photo">
-                
-                <ul class="info-list">
-                    <li><strong>Nama Lengkap:</strong> Muhammad Al Farel Azhar</li>
-                    <li><strong>NIM:</strong> 241401009</li>
-                    <li><strong>Kom:</strong> C</li>
-                    <li><strong>Hobi:</strong> Bermain game, mengetik, berenang</li>
-                    <li><strong>Motto Hidup:</strong> "Nikmati setiap momen dengan jadi diri sendiri."</li>
+          <div class="profile-section">
+            <img
+              src="asset/image/profileImage.jpg"
+              alt="Foto Pribadi"
+              class="profile-photo"
+              id="profile-photo"
+            />
+
+            <ul class="info-list">
+              <li><strong>Nama Lengkap:</strong> Muhammad Al Farel Azhar</li>
+              <li><strong>NIM:</strong> 241401009</li>
+              <li><strong>Kom:</strong> C</li>
+              <li><strong>Hobi:</strong> Bermain game, mengetik, berenang</li>
+              <li>
+                <strong>Motto Hidup:</strong> "Nikmati setiap momen dengan jadi
+                diri sendiri."
+              </li>
+            </ul>
+          </div>
+
+          <div class="short-intro reveal-fade">
+            <h2><span id="typing-text"></span></h2>
+          </div>
+
+          <hr class="horizontal-divider" />
+
+          <div class="combined-conten reveal-left">
+            <h2>Riwayat Pendidikan & Pengalaman</h2>
+            <div class="content-container">
+              <div class="education-section">
+                <ul class="education-list">
+                  <li>
+                    <h3>MIS Fauzan Al Islamiyah</h3>
+                    <p><strong>Tahun:</strong> 2012 - 2018</p>
+                  </li>
+                  <li>
+                    <h3>MTS Negeri 1 Medan</h3>
+                    <p><strong>Tahun:</strong> 2018 - 2021</p>
+                  </li>
+                  <li>
+                    <h3>MAS Muallimin UNIVA Medan</h3>
+                    <p><strong>Jurusan:</strong> MIPA</p>
+                    <p><strong>Tahun:</strong> 2021 - 2024</p>
+                  </li>
+                  <li>
+                    <h3>Universitas Sumatera Utara</h3>
+                    <p><strong>Jurusan:</strong> Ilmu Komputer</p>
+                    <p><strong>Tahun:</strong> 2024 - Sekarang</p>
+                  </li>
                 </ul>
+              </div>
+
+              <div class="experience-section">
+                <p class="experience-paragraph">
+                  Selama kuliah di Universitas Sumatera Utara, saya aktif dalam
+                  berbagai kegiatan kampus. Saya pernah menjadi anggota panitia
+                  Computer Science Annual dan juga panitia Pekan Olahraga dan
+                  Seni. Selain itu, saya sering mengikuti seminar-seminar yang
+                  diselenggarakan di kampus untuk menambah wawasan. Saya juga
+                  bergabung dengan Google Developer Group on Campus USU dan
+                  sempat mengikuti Pelatihan Dasar Organisasi. Sebagai proyek
+                  pribadi, saya pernah mencoba membuat aplikasi sederhana untuk
+                  menonton anime menggunakan software Qt Creator.
+                </p>
+              </div>
             </div>
-            
-            <div class="short-intro">
-                <h2><span id="typing-text"></span></h2>
-            </div>
-            
-            <hr class="horizontal-divider">
-            
-            <div class="combined-content">
-                <h2>Riwayat Pendidikan & Pengalaman</h2>
-                <div class="content-container">
-                    <div class="education-section">
-                        <ul class="education-list">
-                            <li>
-                                <h3>MIS Fauzan Al Islamiyah</h3>
-                                <p><strong>Tahun:</strong> 2012 - 2018</p>
-                            </li>
-                            <li>
-                                <h3>MTS Negeri 1 Medan </h3>
-                                <p><strong>Tahun:</strong> 2018 - 2021</p>
-                            </li>
-                            <li>
-                                <h3>MAS Muallimin UNIVA Medan</h3>
-                                <p><strong>Jurusan:</strong> MIPA</p>
-                                <p><strong>Tahun:</strong> 2021 - 2024</p>
-                            </li>
-                            <li>
-                                <h3>Universitas Sumatera Utara</h3>
-                                <p><strong>Jurusan:</strong> Ilmu Komputer</p>
-                                <p><strong>Tahun:</strong> 2024 - Sekarang</p>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="experience-section">
-                        <p class="experience-paragraph">
-                            Selama kuliah di Universitas Sumatera Utara, saya aktif dalam berbagai kegiatan kampus. Saya pernah menjadi anggota panitia Computer Science Annual dan juga panitia Pekan Olahraga dan Seni. Selain itu, saya sering mengikuti seminar-seminar yang diselenggarakan di kampus untuk menambah wawasan. Saya juga bergabung dengan Google Developer Group on Campus USU dan sempat mengikuti Pelatihan Dasar Organisasi. Sebagai proyek pribadi, saya pernah mencoba membuat aplikasi sederhana untuk menonton anime menggunakan software Qt Creator.
-                        </p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </section>
 
         <section id="schedule">
+          <div class="table-container">
             <h2>Jadwal Kuliah Semester Ini</h2>
             <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Waktu</th>
-                        <th>Mata Kuliah</th>
-                        <th>Dosen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Senin</td>
-                        <td>14:50 - 16 30</td>
-                        <td>Praktikum Pemrograman Web 5</td>
-                        <td>Nurrahmadayeni M.Kom</td>
-                    </tr>
-                    <tr>
-                        <td>Selasa</td>
-                        <td>10:00 - 11:40</td>
-                        <td>IELTS Preparation</td>
-                        <td>Drs. Yulianus Harefa GradDipEd TESOL., MEd TESOL</td>
-                    </tr>
-                    <tr>
-                        <td>Selasa</td>
-                        <td>12:20 - 14:50</td>
-                        <td>Teknologi Komunikasi dan Informasi</td>
-                        <td>Dr. Feni Khairifa S.Sos., MA</td>
-                    </tr>
-                    <tr>
-                        <td>Rabu</td>
-                        <td>08:00 - 10:30</td>
-                        <td>Struktur Data</td>
-                        <td>Anandhini Medianty Nababan S.Kom., M.T</td>
-                    </tr>
-                    <tr>
-                        <td>Rabu</td>
-                        <td>10:30 - 13:00</td>
-                        <td>Kecerdasan Buatan</td>
-                        <td>Dr. Pauzi Ibrahim Nainggolan S.Komp., M.Sc</td>
-                    </tr>
-                    <tr>
-                        <td>Rabu</td>
-                        <td>14:40 - 17:10</td>
-                        <td>Pemrograman Web</td>
-                        <td>Dr. Dewi Sartika Br Ginting S.Kom., M.Kom</td>
-                    </tr>
-                    <tr>
-                        <td>Kamis</td>
-                        <td>08:00 - 09:40</td>
-                        <td>Praktikum Struktur Data 5</td>
-                        <td>Dr. Dewi Sartika Br Ginting S.Kom., M.Kom</td>
-                    </tr>
-                    <tr>
-                        <td>Jumat</td>
-                        <td>08:00 - 10:30</td>
-                        <td>Basis Data</td>
-                        <td>Dr. Dewi Sartika Br Ginting S.Kom., M.Kom</td>
-                    </tr>
-                    <tr>
-                        <td>Jumat</td>
-                        <td>10:30 - 12:10</td>
-                        <td>Wirausaha Digital</td>
-                        <td>Dr. T. Henny Febriana Harumy S.Kom., M.Kom</td>
-                    </tr>
-                    <tr>
-                        <td>Jumat</td>
-                        <td>14:00 - 15:40</td>
-                        <td>Praktikum Basis Data 6</td>
-                        <td>Anandhini Medianty Nababan S.Kom., M.T</td>
-                    </tr>
-                </tbody>
+              <thead>
+                <tr>
+                  <th>Hari</th>
+                  <th>Waktu</th>
+                  <th>Mata Kuliah</th>
+                  <th>Dosen</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Senin</td>
+                  <td>14:50 - 16 30</td>
+                  <td>Praktikum Pemrograman Web</td>
+                  <td>Nurrahmadayeni M.Kom</td>
+                </tr>
+                <tr>
+                  <td>Selasa</td>
+                  <td>10:00 - 11:40</td>
+                  <td>IELTS Preparation</td>
+                  <td>Drs. Yulianus Harefa GradDipEd TESOL., MEd TESOL</td>
+                </tr>
+                <tr>
+                  <td>Selasa</td>
+                  <td>12:20 - 14:50</td>
+                  <td>Teknologi Komunikasi dan Informasi</td>
+                  <td>Dr. Feni Khairifa S.Sos., MA</td>
+                </tr>
+                <tr>
+                  <td>Rabu</td>
+                  <td>08:00 - 10:30</td>
+                  <td>Struktur Data</td>
+                  <td>Anandhini Medianty Nababan S.Kom., M.T</td>
+                </tr>
+                <tr>
+                  <td>Rabu</td>
+                  <td>10:30 - 13:00</td>
+                  <td>Kecerdasan Buatan</td>
+                  <td>Dr. Pauzi Ibrahim Nainggolan S.Komp., M.Sc</td>
+                </tr>
+                <tr>
+                  <td>Rabu</td>
+                  <td>14:40 - 17:10</td>
+                  <td>Pemrograman Web</td>
+                  <td>Dr. Dewi Sartika Br Ginting S.Kom., M.Kom</td>
+                </tr>
+                <tr>
+                  <td>Kamis</td>
+                  <td>08:00 - 09:40</td>
+                  <td>Praktikum Basis Data</td>
+                  <td>Dr. Dewi Sartika Br Ginting S.Kom., M.Kom</td>
+                </tr>
+                <tr>
+                  <td>Jumat</td>
+                  <td>08:00 - 10:30</td>
+                  <td>Basis Data</td>
+                  <td>Dr. Dewi Sartika Br Ginting S.Kom., M.Kom</td>
+                </tr>
+                <tr>
+                  <td>Jumat</td>
+                  <td>10:30 - 12:10</td>
+                  <td>Wirausaha Digital</td>
+                  <td>Dr. T. Henny Febriana Harumy S.Kom., M.Kom</td>
+                </tr>
+                <tr>
+                  <td>Jumat</td>
+                  <td>14:00 - 15:40</td>
+                  <td>Praktikum Struktur Data</td>
+                  <td>Anandhini Medianty Nababan S.Kom., M.T</td>
+                </tr>
+              </tbody>
             </table>
+          </div>
         </section>
-    </main>
-    
-    <footer>
+
+        <section id="materi">
+          <h2>Materi Pemrograman Web</h2>
+          <div class="materi-nav">
+            <a href="#pengenalan">HTML, CSS, JS & Tailwind</a>
+            <a href="#kesan">Kesan & Pesan</a>
+            <a href="#tutorial">Cara Membuat Website</a>
+          </div>
+
+          <div id="pengenalan" class="materi-card">
+            <h3>Mengenal HTML, CSS, JavaScript, dan Tailwind CSS</h3>
+            <p>
+              Dalam pengembangan website modern, keempat teknologi ini adalah
+              pondasi utama yang membentuk tampilan dan fungsi dari setiap
+              halaman web. Masing-masing punya peran penting yang saling
+              melengkapi untuk menciptakan pengalaman pengguna yang interaktif,
+              responsif, dan menarik.
+            </p>
+
+            <div class="sub-materi reveal-right">
+              <h4>
+                <i class="fas fa-code"></i> HTML (HyperText Markup Language)
+              </h4>
+              <p>
+                HTML adalah bahasa markup yang digunakan untuk menyusun struktur
+                dasar halaman web. Elemen-elemen seperti teks, gambar, tautan,
+                tabel, dan form didefinisikan menggunakan tag HTML. Bisa
+                dibilang, HTML adalah “kerangka tulang” dari sebuah website.
+              </p>
+              <ul>
+                <li>
+                  <strong>&lt;h1&gt; - &lt;h6&gt; :</strong> untuk judul dan
+                  subjudul.
+                </li>
+                <li><strong>&lt;p&gt; :</strong> untuk paragraf teks.</li>
+                <li><strong>&lt;a&gt; :</strong> untuk membuat hyperlink.</li>
+                <li>
+                  <strong>&lt;img&gt; :</strong> untuk menampilkan gambar.
+                </li>
+                <li>
+                  <strong>&lt;div&gt; :</strong> untuk mengelompokkan elemen.
+                </li>
+              </ul>
+            </div>
+
+            <div class="sub-materi reveal-right">
+              <h4>
+                <i class="fas fa-paint-brush"></i> CSS (Cascading Style Sheets)
+              </h4>
+              <p>
+                CSS digunakan untuk mengatur tampilan visual dari halaman web.
+                Dengan CSS, kita bisa mengubah warna, ukuran font, posisi
+                elemen, animasi, dan banyak lagi. CSS menjadikan website
+                terlihat menarik dan profesional.
+              </p>
+              <ul>
+                <li><strong>color:</strong> mengatur warna teks.</li>
+                <li>
+                  <strong>background:</strong> memberi warna atau gambar latar
+                  belakang.
+                </li>
+                <li>
+                  <strong>margin / padding:</strong> mengatur jarak antar
+                  elemen.
+                </li>
+                <li>
+                  <strong>border-radius:</strong> membuat sudut elemen jadi
+                  melengkung.
+                </li>
+                <li><strong>animation:</strong> menambahkan efek bergerak.</li>
+              </ul>
+            </div>
+
+            <div class="sub-materi reveal-right">
+              <h4><i class="fas fa-bolt"></i> JavaScript (JS)</h4>
+              <p>
+                JavaScript adalah bahasa pemrograman yang menambahkan
+                interaktivitas pada website. Tanpa JS, web hanya akan bersifat
+                statis. Dengan JS, kita bisa membuat tombol yang merespons klik,
+                animasi dinamis, validasi form, kalkulator, sampai game berbasis
+                web.
+              </p>
+              <ul>
+                <li>
+                  <strong>document.querySelector():</strong> untuk memilih
+                  elemen HTML.
+                </li>
+                <li>
+                  <strong>addEventListener():</strong> mendeteksi aksi pengguna.
+                </li>
+                <li>
+                  <strong>if/else, loop, function:</strong> logika pemrograman
+                  dasar.
+                </li>
+                <li>
+                  <strong>fetch():</strong> mengambil data dari API eksternal.
+                </li>
+              </ul>
+            </div>
+
+            <div class="sub-materi reveal-right">
+              <h4><i class="fas fa-layer-group"></i> Tailwind CSS</h4>
+              <p>
+                Tailwind CSS adalah framework CSS modern yang menggunakan sistem
+                “utility-first”. Artinya, kita tidak perlu membuat file CSS
+                terpisah — cukup pakai class bawaan seperti
+                <code>bg-blue-500</code> atau <code>text-center</code> langsung
+                di elemen HTML. Ini mempercepat proses styling dan menjaga
+                konsistensi desain di seluruh halaman.
+              </p>
+              <ul>
+                <li><strong>flex, grid:</strong> untuk layout responsif.</li>
+                <li>
+                  <strong>shadow-lg, rounded-xl:</strong> untuk efek bayangan
+                  dan sudut halus.
+                </li>
+                <li>
+                  <strong>hover:text-blue-600:</strong> efek interaktif saat
+                  pointer diarahkan.
+                </li>
+                <li>
+                  <strong>dark mode:</strong> dukungan tema gelap otomatis.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="tutorial" class="materi-card">
+            <h3 class="reveal-right">Tata Cara Membuat Website Sederhana</h3>
+            <ol class="reveal-right">
+              <li>Buat folder proyek (misalnya <strong>myWebsite</strong>).</li>
+              <li>
+                Buat tiga file utama: <code>index.html</code>,
+                <code>style.css</code>, dan <code>main.js</code>.
+              </li>
+              <li>
+                Tulis struktur dasar HTML dan hubungkan file CSS & JS-nya.
+              </li>
+              <li>Tambahkan elemen seperti header, paragraf, dan gambar.</li>
+              <li>Gunakan CSS untuk mempercantik tampilan.</li>
+              <li>Tambahkan JavaScript untuk interaksi (misal efek klik).</li>
+              <li>Uji di browser dan rapikan desainnya.</li>
+            </ol>
+          </div>
+
+          <div id="kesan" class="materi-card">
+            <h3 class="reveal-right">
+              Kesan dan Pesan Belajar Pemrograman Web
+            </h3>
+            <ol class="reveal-right">
+              <li>
+                Belajar pemrograman web awalnya terasa ribet, tapi lama-lama
+                seru banget! 😆 Aku jadi ngerti gimana cara bikin tampilan
+                website yang interaktif dan keren. Tantangan terbesar itu ngatur
+                layout biar responsif dan rapi, tapi setelah paham konsepnya,
+                malah nagih buat ngulik terus. Pesanku: jangan takut error,
+                soalnya setiap error itu langkah menuju “AHA moment” 😎.
+              </li>
+            </ol>
+          </div>
+        </section>
+      </main>
+
+      <footer class="reveal">
         <div class="social-icons">
-            <a href="https://www.instagram.com/azharell._/" target="_blank">
-                <i class="fab fa-instagram social-icon"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/azharell-titik-kumpul/" target="_blank">
-                <i class="fab fa-linkedin-in social-icon"></i>
-            </a>
-            <a href="https://www.facebook.com/alfarelazhar.fazhar/" target="_blank">
-                <i class="fab fa-facebook-f social-icon"></i>
-            </a>
-            <a href="https://github.com/reliquamarine" target="_blank">
-                <i class="fab fa-github social-icon"></i>
-            </a>
+          <a href="https://www.instagram.com/azharell._/" target="_blank">
+            <i class="fab fa-instagram social-icon"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/azharell-titik-kumpul/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in social-icon"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/alfarelazhar.fazhar/"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f social-icon"></i>
+          </a>
+          <a href="https://github.com/reliquamarine" target="_blank">
+            <i class="fab fa-github social-icon"></i>
+          </a>
         </div>
         <p>&#169; 2025. Made by tikum.</p>
-    </footer>
-</div>
+      </footer>
+    </div>
 
-<div class="image-popup" id="image-popup">
-    <span class="close-btn" id="close-btn">&times;</span>
-    <img src="asset/image/profileImage.jpg" alt="Foto Pribadi Besar" class="image-popup-content" id="popup-image">
-</div>
-<script src="asset/java/main.js"></script>
-</body>
+    <div class="image-popup" id="image-popup">
+      <span class="close-btn" id="close-btn">&times;</span>
+      <img
+        src="asset/image/profileImage.jpg"
+        alt="Foto Pribadi Besar"
+        class="image-popup-content"
+        id="popup-image"
+      />
+    </div>
+    <script src="asset/java/main.js"></script>
+  </body>
 </html>
-
-
