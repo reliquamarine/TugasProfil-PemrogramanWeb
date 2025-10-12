@@ -56,7 +56,7 @@ const reveals = document.querySelectorAll(
 
 function revealOnScroll() {
   const windowHeight = window.innerHeight;
-  const revealPoint = 100;
+  const revealPoint = 200; 
 
   reveals.forEach((element) => {
     const elementTop = element.getBoundingClientRect().top;
@@ -69,5 +69,10 @@ function revealOnScroll() {
   });
 }
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+window.addEventListener("scroll", () => {
+  revealOnScroll();
+
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+    reveals.forEach((el) => el.classList.add("active"));
+  }
+});
