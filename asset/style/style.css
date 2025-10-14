@@ -469,24 +469,7 @@ footer {
   margin-bottom: 30px;
 }
 
-#materi ol li {
-  background: #ffffff;
-  margin: 10px 0;
-  padding: 12px 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 1.05em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 5px solid var(--primary-color);
-}
-
-#materi ol li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-#materi p,
-#materi ol li {
+#materi p {
   animation: fadeInUp 0.6s ease both;
 }
 
@@ -531,6 +514,89 @@ footer {
 .sub-materi i {
   color: var(--primary-color);
   font-size: 1.1em;
+}
+
+.tutorial-step {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  border-left: 5px solid var(--primary-color);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tutorial-step h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.tutorial-step i {
+  font-size: 1.2em;
+}
+
+.tutorial-step p {
+  text-align: justify;
+  color: #333;
+  line-height: 1.6;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 16/9;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #333;
+  transform: translateY(-4px);
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @keyframes fadeInUp {
@@ -622,6 +688,27 @@ html {
   }
   .sub-materi h4 {
     font-size: 1.05em;
+  }
+
+  .tutorial-step {
+    padding: 14px;
+  }
+  .tutorial-step h4 {
+    font-size: 1em;
+  }
+  .tutorial-step p {
+    font-size: 0.95em;
+  }
+
+  .video-container {
+    aspect-ratio: 16/9;
+    height: auto;
+    max-width: 100%;
+  }
+  .video-container iframe {
+    height: 100%;
+    width: 100%;
+    min-height: 180px;
   }
 }
 
