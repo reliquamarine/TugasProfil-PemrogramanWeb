@@ -306,37 +306,104 @@
           </div>
 
           <div id="tutorial" class="materi-card">
-            <h3 class="reveal-right">Tata Cara Membuat Website Sederhana</h3>
-            <ol class="reveal-right">
-              <li>Buat folder proyek (misalnya <strong>myWebsite</strong>).</li>
-              <li>
-                Buat tiga file utama: <code>index.html</code>,
-                <code>style.css</code>, dan <code>main.js</code>.
-              </li>
-              <li>
-                Tulis struktur dasar HTML dan hubungkan file CSS & JS-nya.
-              </li>
-              <li>Tambahkan elemen seperti header, paragraf, dan gambar.</li>
-              <li>Gunakan CSS untuk mempercantik tampilan.</li>
-              <li>Tambahkan JavaScript untuk interaksi (misal efek klik).</li>
-              <li>Uji di browser dan rapikan desainnya.</li>
-            </ol>
+            <h3>Tata Cara Membuat Website Sederhana</h3>
+
+            <p>
+              Membangun website sederhana itu sebenarnya gampang banget asal
+              ngerti urutannya. Berikut langkah-langkah dasar yang bisa kamu
+              ikuti buat bikin web pertamamu:
+            </p>
+
+            <div class="tutorial-step reveal-right">
+              <h4><i class="fas fa-folder-open"></i> Buat Folder Proyek</h4>
+              <p>
+                Siapkan satu folder utama (misalnya <strong>myWebsite</strong>)
+                sebagai tempat nyimpen semua file webmu. Folder ini kayak “rumah
+                besar” buat file HTML, CSS, gambar, dan JavaScript.
+              </p>
+            </div>
+
+            <div class="tutorial-step reveal-right">
+              <h4><i class="fas fa-file-code"></i> Buat Tiga File Utama</h4>
+              <p>
+                Bikin tiga file utama: <code>index.html</code>,
+                <code>style.css</code>, dan <code>main.js</code>. Ketiganya
+                punya fungsi berbeda — HTML buat struktur halaman, CSS buat
+                tampilan, dan JS buat interaksi.
+              </p>
+            </div>
+
+            <div class="tutorial-step reveal-right">
+              <h4><i class="fas fa-link"></i> Hubungkan File CSS & JS</h4>
+              <p>
+                Di dalam file <code>index.html</code>, tambahkan tag
+                <code>&lt;link&gt;</code> buat nyambungin
+                <code>style.css</code> dan tag <code>&lt;script&gt;</code> buat
+                ngelink ke <code>main.js</code>. Supaya semua elemen bisa
+                bekerja bareng.
+              </p>
+            </div>
+
+            <div class="tutorial-step reveal-right">
+              <h4><i class="fas fa-image"></i> Tambahkan Elemen Website</h4>
+              <p>
+                Setelah itu, isi halaman dengan elemen seperti
+                <code>&lt;header&gt;</code>, <code>&lt;p&gt;</code>, dan
+                <code>&lt;img&gt;</code> biar websitemu punya struktur dasar dan
+                kelihatan hidup.
+              </p>
+            </div>
+
+            <div class="tutorial-step reveal-right">
+              <h4><i class="fas fa-paint-brush"></i> Percantik dengan CSS</h4>
+              <p>
+                Ubah warna, font, dan tata letak biar lebih estetik. Tambahin
+                efek hover atau bayangan biar tampilannya lebih profesional.
+              </p>
+            </div>
+
+            <div class="tutorial-step reveal-right">
+              <h4>
+                <i class="fas fa-bolt"></i> Tambahkan Interaksi dengan
+                JavaScript
+              </h4>
+              <p>
+                Tambahkan fungsi interaktif kayak tombol yang bisa diklik, teks
+                yang muncul otomatis, atau animasi biar pengguna lebih betah.
+              </p>
+            </div>
+
+            <div class="tutorial-step reveal-right">
+              <h4><i class="fas fa-check-circle"></i> Uji dan Rapikan</h4>
+              <p>
+                Terakhir, buka file <code>index.html</code> di browser dan cek
+                hasilnya. Kalau masih kurang pas, tinggal ubah di CSS atau
+                JS-nya sampai sesuai selera. 🚀
+              </p>
+            </div>
+
+            <p>Untuk lebih jelasnya bisa dilihat di video YouTube berikut:</p>
+            <div class="video-container reveal-right">
+              <iframe
+                src="https://www.youtube.com/embed/71a2zeC71gk"
+                title="Video Tutorial Membuat Website"
+                frameborder="0"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
           </div>
 
-          <div id="kesan" class="materi-card">
-            <h3 class="reveal-right">
-              Kesan dan Pesan Belajar Pemrograman Web
-            </h3>
-            <ol class="reveal-right">
-              <li>
-                Belajar pemrograman web awalnya terasa ribet, tapi lama-lama
-                seru banget! 😆 Aku jadi ngerti gimana cara bikin tampilan
-                website yang interaktif dan keren. Tantangan terbesar itu ngatur
-                layout biar responsif dan rapi, tapi setelah paham konsepnya,
-                malah nagih buat ngulik terus. Pesanku: jangan takut error,
-                soalnya setiap error itu langkah menuju “AHA moment” 😎.
-              </li>
-            </ol>
+          <div id="kesan" class="sub-materi reveal-right">
+            <h3>Kesan dan Pesan Belajar Pemrograman Web</h3>
+            <p>
+              Belajar pemrograman web awalnya bikin ga paham, walau begitu
+              ternyata lumayan asik! 😆 Aku jadi ngerti gimana cara bikin
+              tampilan website yang interaktif dan keren. Tantangan terbesar itu
+              ngatur layout biar responsif dan rapi, tapi setelah paham
+              konsepnya, malah nagih buat ngulik terus. Pesanku: jangan takut
+              error, soalnya setiap error itu langkah menuju “AHA moment” 😎.
+            </p>
           </div>
         </section>
       </main>
@@ -375,7 +442,9 @@
         id="popup-image"
       />
     </div>
+    <button id="scrollTopBtn" title="Kembali ke atas">
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="asset/java/main.js"></script>
   </body>
 </html>
-
