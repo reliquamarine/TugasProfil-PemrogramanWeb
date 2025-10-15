@@ -307,11 +307,10 @@
 
           <div id="tutorial" class="materi-card">
             <h3>Tata Cara Membuat Website Sederhana</h3>
-
             <p>
-              Membangun website sederhana itu sebenarnya gampang banget asal
-              ngerti urutannya. Berikut langkah-langkah dasar yang bisa kamu
-              ikuti buat bikin web pertamamu:
+              Membangun website sederhana itu sebenarnya gampang, asal ngerti
+              urutannya. Berikut langkah-langkah dasar yang bisa untuk diikuti
+              buat bikin web:
             </p>
 
             <div class="tutorial-step reveal-right">
@@ -331,6 +330,12 @@
                 punya fungsi berbeda — HTML buat struktur halaman, CSS buat
                 tampilan, dan JS buat interaksi.
               </p>
+              <pre><code><span class="comment">&lt;!-- Struktur Folder --&gt;</span>
+myWebsite/
+├── index.html
+├── style.css
+└── main.js
+</code></pre>
             </div>
 
             <div class="tutorial-step reveal-right">
@@ -342,6 +347,28 @@
                 ngelink ke <code>main.js</code>. Supaya semua elemen bisa
                 bekerja bareng.
               </p>
+              <pre><code><span class="comment">&lt;!-- index.html --&gt;</span>
+<span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="value">"id"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="value">"UTF-8"</span> <span class="tag">/&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="value">"viewport"</span> 
+          <span class="attr">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span> <span class="tag">/&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Website Sederhana<span class="tag">&lt;/title&gt;</span>
+
+    <span class="comment">&lt;!-- Hubungkan file CSS --&gt;</span>
+    <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="value">"stylesheet"</span> 
+          <span class="attr">href</span>=<span class="value">"style.css"</span> <span class="tag">/&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Halo Dunia!<span class="tag">&lt;/h1&gt;</span>
+
+    <span class="comment">&lt;!-- Hubungkan file JavaScript --&gt;</span>
+    <span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="value">"main.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre>
             </div>
 
             <div class="tutorial-step reveal-right">
@@ -352,6 +379,19 @@
                 <code>&lt;img&gt;</code> biar websitemu punya struktur dasar dan
                 kelihatan hidup.
               </p>
+              <pre><code><span class="comment">&lt;!-- Contoh isi dasar halaman HTML --&gt;</span>
+<span class="tag">&lt;header&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>Halo, Selamat Datang di Websiteku<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;/header&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>
+  Ini adalah website pertama saya menggunakan 
+  <span class="tag">&lt;strong&gt;</span>HTML, CSS, dan JavaScript<span class="tag">&lt;/strong&gt;</span>.
+<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="value">"foto.jpg"</span> 
+     <span class="attr">alt</span>=<span class="value">"Foto Keren"</span> <span class="tag">/&gt;</span>
+</code></pre>
             </div>
 
             <div class="tutorial-step reveal-right">
@@ -360,6 +400,23 @@
                 Ubah warna, font, dan tata letak biar lebih estetik. Tambahin
                 efek hover atau bayangan biar tampilannya lebih profesional.
               </p>
+              <pre><code><span class="comment">/* style.css */</span>
+<span class="tag">body</span> {
+  <span class="attr">font-family</span>: <span class="value">'Poppins', sans-serif</span>;
+  <span class="attr">background-color</span>: <span class="value">#f3f4f6</span>;
+  <span class="attr">text-align</span>: <span class="value">center</span>;
+}
+
+<span class="tag">h1</span> {
+  <span class="attr">color</span>: <span class="value">#2563eb</span>;
+}
+
+<span class="tag">img</span> {
+  <span class="attr">width</span>: <span class="value">300px</span>;
+  <span class="attr">border-radius</span>: <span class="value">10px</span>;
+  <span class="attr">box-shadow</span>: <span class="value">0 4px 10px rgba(0,0,0,0.2)</span>;
+}
+</code></pre>
             </div>
 
             <div class="tutorial-step reveal-right">
@@ -371,6 +428,18 @@
                 Tambahkan fungsi interaktif kayak tombol yang bisa diklik, teks
                 yang muncul otomatis, atau animasi biar pengguna lebih betah.
               </p>
+              <pre><code><span class="comment">// main.js</span>
+<span class="keyword">function</span> <span class="function">halo</span>() {
+  <span class="keyword">alert</span>(<span class="string">"Halo! Ini website pertamaku 🎉"</span>);
+}
+</code></pre>
+
+              <p>Lalu tambahkan tombol di HTML:</p>
+              <pre><code><span class="comment">&lt;!-- index.html --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">onclick</span>=<span class="value">"halo()"</span><span class="tag">&gt;</span>
+  Klik Aku
+<span class="tag">&lt;/button&gt;</span>
+</code></pre>
             </div>
 
             <div class="tutorial-step reveal-right">
