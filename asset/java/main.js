@@ -32,6 +32,19 @@ navLinks.forEach((link) => {
   });
 });
 
+function pindahSemester(nomor) {
+  const semuaKonten = document.querySelectorAll('.semester-content');
+  semuaKonten.forEach(konten => konten.classList.remove('active'));
+
+  const semuaTombol = document.querySelectorAll('.sem-btn');
+  semuaTombol.forEach(tombol => tombol.classList.remove('active'));
+
+  document.getElementById('sem-' + nomor).classList.add('active');
+  semuaTombol[nomor - 1].classList.add('active');
+
+  document.getElementById('semester-judul').innerText = nomor;
+}
+
 const profilePhoto = document.getElementById("profile-photo");
 const imagePopup = document.getElementById("image-popup");
 const closeBtn = document.getElementById("close-btn");
